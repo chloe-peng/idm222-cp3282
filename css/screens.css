@@ -61,7 +61,7 @@ p {
 }
 
 li, a, button {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -91,27 +91,9 @@ header {
     align-items: center;
     padding: 30px 10%;
 
-    .nav-links {
-        li {
-            list-style: none;
-            display: inline-block;
-            padding: 0px 20px;
-        }
-
-        li a {
-            text-decoration: none;
-            transition: all 0.3s ease 0s;
-        }
-
-        li a:hover {
-            font-weight: 1000;
-            text-decoration: underline wavy var(--text-color-light) 2px;
-        }
-    }
-    
     button {
         padding: 5px 20px;
-        border: solid 1px var(--text-color-dark);
+        border: solid 1px var(--text-color-light);
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease 0s;
@@ -119,7 +101,25 @@ header {
 
     button:hover {
         background-color: rgba(61, 86, 217, 0.8);
-        color: var(--background-color-light)
+        color: var(--background-color-light);
+    }
+}
+
+.nav-links {
+    li {
+        list-style: none;
+        display: inline-block;
+        padding: 0px 5px;
+    }
+
+    li a {
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+    }
+
+    li a:hover {
+        font-weight: 1000;
+        text-decoration: underline wavy var(--text-color-light) 2px;
     }
 }
 
@@ -128,16 +128,52 @@ header {
 }
 
 .main-home {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    margin-inline: 5px;
+    padding-block: 5px;
 
     display: grid;
-    grid-template-columns: 40px 50px auto 50px 50px;
-    grid-template-rows: repeat(1fr);
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .intro-text {
-    grid-column-start: 1;
-    grid-column-end: span col4-start;
+    grid-column-start: 2;
+    grid-column-end: span 3;
     grid-row-start: 2;
-    grid-row-end: span 2
-  }
+    grid-row-end: span 1;
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-weight: 300;
+    }
+}
+
+.intro-first-img {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 5;
+    grid-column-end: span 1;
+
+    align-self: end;
+
+    img {
+        width: 100%;
+    }
+}
+
+.intro-second-img {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 6;
+    grid-column-end: span 1;
+
+    align-self: end;
+
+    img {
+        width: 100%;
+    }
+}
