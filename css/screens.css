@@ -127,7 +127,7 @@ header {
     cursor: pointer;
 }
 
-.main-home {
+.home-main {
     /* background-color: lightgray; */
     margin-inline: 5px;
     padding-block: 5px;
@@ -139,7 +139,7 @@ header {
 
 .intro-text {
     grid-column-start: 2;
-    grid-column-end: span 3;
+    grid-column-end: span 4;
     grid-row-start: 2;
     grid-row-end: span 1;
 
@@ -175,5 +175,86 @@ header {
 
     img {
         width: 100%;
+    }
+}
+
+.home-polaroid {
+    margin-inline: 5px;
+    padding-block: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.polaroid-1 {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+
+    img {
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+.polaroid-2 {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 3;
+    grid-column-end: span 2;
+
+    img {
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.polaroid-3 {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 4;
+    grid-column-end: span 2;
+
+    img {
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.about-profile {
+    padding: 10px;
+    margin-inline: auto;
+
+    width: 80%;
+    border: 1px solid var(--text-color-light);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+}
+
+.img-left {
+    width: 30%;
+    
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.text-right {
+    width: 70%;
+    padding: 10px;
+
+    p {
+        font-size: 16px;
     }
 }
