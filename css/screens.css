@@ -70,7 +70,7 @@ em {
 }
 
 b {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 body {
@@ -128,9 +128,8 @@ header {
 }
 
 .home-main {
-    /* background-color: lightgray; */
-    margin-inline: 5px;
-    padding-block: 5px;
+    /* margin-inline: 5px;
+    padding-block: 5px; */
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
@@ -196,9 +195,11 @@ header {
     grid-column-start: 2;
     grid-column-end: span 2;
 
+    z-index: 0;
+
     img {
         width: 100%;
-        z-index: 0;
+        transform: rotate(-5deg);
     }
 }
 
@@ -207,10 +208,10 @@ header {
     grid-row-end: span 1;
     grid-column-start: 3;
     grid-column-end: span 2;
+    z-index: 1;
 
     img {
         width: 100%;
-        z-index: 1;
     }
 }
 
@@ -220,13 +221,15 @@ header {
     grid-column-start: 4;
     grid-column-end: span 2;
 
+    z-index: 0;
+
     img {
         width: 100%;
-        z-index: -1;
+        transform: rotate(5deg);
     }
 }
 
-.about-profile {
+.img-text-container {
     padding: 10px;
     margin-inline: auto;
 
@@ -243,6 +246,9 @@ header {
 
 .img-left {
     width: 30%;
+    padding: 5px;
+    border: 1px solid var(--text-color-light);
+    border-radius: 15px;
     
     img {
         width: 100%;
@@ -256,5 +262,77 @@ header {
 
     p {
         font-size: 16px;
+    }
+    
+}
+
+.inline-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px 10px;
+
+    img {
+        width: 30px;
+    }
+}
+
+.img-link {
+    justify-content: left;
+
+    img {
+        width: 70px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+}
+
+.text-container {
+    width: 80%;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.cards-section {
+    width: 80%;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.card {
+    width: 25vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    /* border: 1px solid var(--text-color-dark); */
+    /* box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15); */
+    text-align: left;
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
