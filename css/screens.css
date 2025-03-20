@@ -146,6 +146,7 @@ header button:hover {
 
 .logo {
     cursor: pointer;
+    width: 20px;
 }
 
 .home-main {
@@ -281,24 +282,20 @@ header button:hover {
 }
 
 .img-left {
-    width: 30%;
+    width: 40%;
     /* padding: 5px;
     border: 1px solid var(--text-color-light); */
     border-radius: 15px;
-    
-    img {
-        width: 100%;
-        border-radius: 10px;
-    }
+}
+
+.img-left img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .text-right {
-    width: 70%;
+    width: 60%;
     padding: 10px;
-
-    p {
-        font-size: 16px;
-    }
 }
 
 .id-card {
@@ -383,7 +380,7 @@ header button:hover {
 }
 
 .card {
-    width: 20vw;
+    width: 30vw;
     height: auto;
 
     display: flex;
@@ -403,6 +400,15 @@ header button:hover {
 }
 
 .blog-section {
+    display: grid;
+}
+
+.blog-section .text-container {
+    align-items: end;
+    justify-self: left;
+}
+
+.blog-nav {
     margin-block: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -414,7 +420,7 @@ header button:hover {
     align-items: start;
 }
 
-.blog-section button {
+.blog-nav button {
     border: 1px solid var(--text-color-light);
     padding: 5px;
 
@@ -422,7 +428,7 @@ header button:hover {
     height: auto;
 }
 
-.blog-section img {
+.blog-nav img {
     width: 100%;
     height: auto;
 }
@@ -447,31 +453,6 @@ header button:hover {
     padding: 5px;
 }
 
-/* .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-
-.container .box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.container .box .dream {
-    display: flex;
-    flex-direction: column;
-    width: 32.5%;
-}
-
-.container .box .dream img {
-    width: 100%;
-    margin-block: 5px;
-} */
-
 .visuals-top {
     width: 100%;
     height: 40vh; 
@@ -484,12 +465,31 @@ header button:hover {
 }
 
 @media (max-width: 800px) {
+    .id-card {
+        flex-direction: column;
+    }
+    .img-left {
+        width: 80%;
+    }
+    .text-right {
+        width: 80%;
+        padding: 5px;
+    }
 
+    .cards-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 40vw;
+    }
 
     .container img {
         width: 50%;
     }
     .visuals-top {
         height: auto;
+    }
+    .blog-nav {
+        grid-template-columns: repeat(3,1fr);
     }
 }
