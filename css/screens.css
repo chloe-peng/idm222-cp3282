@@ -420,7 +420,7 @@ header button:hover {
     align-items: start;
 }
 
-.blog-nav button {
+.blog-nav .button {
     border: 1px solid var(--text-color-light);
     padding: 5px;
 
