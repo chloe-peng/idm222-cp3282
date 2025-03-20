@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope';
     src: url(../fonts/Manrope.ttf);
     font-style: normal;
 }
 
 @font-face {
-    font-family: Noto, serif;
+    font-family: 'Noto';
     src: url(../fonts/NotoSerif.ttf);
 }
 
@@ -82,12 +82,6 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 body {
@@ -111,7 +105,15 @@ header {
     background-color: var(--background-color-light);
 }
 
-header button {
+.nav-links li {
+        list-style: none;
+        display: inline-block;
+        padding: 0px 5px;
+}
+
+li a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
     padding: 5px 20px;
     border: solid 1px var(--text-color-light);
     border-radius: 50px;
@@ -119,34 +121,16 @@ header button {
     transition: all 0.3s ease 0s;
 }
 
-header button:hover {
+li a:hover {
     background-color: rgba(61, 86, 217, 0.8);
     color: var(--background-color-light);
 
-    /* transform: none; */
-}
-
-.nav-links {
-    li {
-        list-style: none;
-        display: inline-block;
-        padding: 0px 5px;
-    }
-
-    li a {
-        text-decoration: none;
-        transition: all 0.3s ease 0s;
-    }
-
-    li a:hover {
-        font-weight: 1000;
-        text-decoration: underline wavy var(--text-color-light) 2px;
-    }
+    font-weight: 1000;
 }
 
 .logo {
     cursor: pointer;
-    width: 20px;
+    width: 30px;
 }
 
 .home-main {
@@ -163,14 +147,14 @@ header button:hover {
     grid-column-end: span 4;
     grid-row-start: 2;
     grid-row-end: span 1;
+}
 
-    h4 {
-        text-transform: uppercase;
-    }
+.intro-text     h4 {
+    text-transform: uppercase;
+}
 
-    h3 {
-        font-weight: 300;
-    }
+.intro-text h3 {
+    font-weight: 300;
 }
 
 .intro-first-img {
@@ -180,10 +164,10 @@ header button:hover {
     grid-column-end: span 1;
 
     align-self: end;
+}
 
-    img {
-        width: 100%;
-    }
+.intro-first-img     img {
+    width: 100%;
 }
 
 .intro-second-img {
@@ -193,10 +177,10 @@ header button:hover {
     grid-column-end: span 1;
 
     align-self: end;
+}
 
-    img {
-        width: 100%;
-    }
+.intro-second-img     img {
+    width: 100%;
 }
 
 .home-polaroid {
@@ -218,11 +202,11 @@ header button:hover {
     grid-column-end: span 2;
 
     z-index: 0;
+}
 
-    img {
-        width: 100%;
-        transform: rotate(-5deg);
-    }
+.polaroid-1     img {
+    width: 100%;
+    transform: rotate(-5deg);
 }
 
 .polaroid-2 {
@@ -231,10 +215,9 @@ header button:hover {
     grid-column-start: 3;
     grid-column-end: span 2;
     z-index: 1;
-
-    img {
-        width: 100%;
-    }
+}
+.polaroid-2 img {
+    width: 100%;
 }
 
 .polaroid-3 {
@@ -244,11 +227,10 @@ header button:hover {
     grid-column-end: span 2;
 
     z-index: 0;
-
-    img {
-        width: 100%;
-        transform: rotate(5deg);
-    }
+}
+.polaroid-3 img {
+    width: 100%;
+    transform: rotate(5deg);
 }
 
 .pages-main {
@@ -274,11 +256,11 @@ header button:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-items: center;
+}
 
-    h3 {
-        font-family: Noto;
-        font-size: 50px;
-    }
+.img-text-container     h3 {
+    font-family: Noto;
+    font-size: 50px;
 }
 
 .img-left {
@@ -302,21 +284,21 @@ header button:hover {
     width: 80%;
 }
 
-.socials-section {
-    display: flexbox;
+/* .socials-section {
+    display: flex;
     flex-wrap: wrap;
     /* grid-template-columns: repeat(2, 1fr); */
 
-    width: 100%;
+    /* width: 100%;
+} */
 
-    p {
-        color: gray;
-        margin-block: 2px;
-    }
+.socials-section p {
+    color: gray;
+    margin-block: 2px;
+}
 
-    h4 {
-        font-size: 18px;
-    }
+.socials-section h4 {
+    font-size: 18px;
 }
 
 
@@ -331,10 +313,9 @@ header button:hover {
     justify-content: center;
 
     margin: 5px auto;
-
-    img {
+}
+.inline-img img {
         width: 30px;
-    }
 }
 
 .img-link {
@@ -426,6 +407,10 @@ header button:hover {
 
     width: 100%;
     height: auto;
+    transition: all 0.3s ease-in-out;
+}
+.blog-nav .button:hover {
+    transform: scale(1.05);
 }
 
 .blog-nav img {
@@ -493,3 +478,17 @@ header button:hover {
         grid-template-columns: repeat(3,1fr);
     }
 }
+
+@media (max-width: 600px) {
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        width: 90vw;
+    }
+
+    .blog-nav {
+        grid-template-columns: 1fr;
+    }
+}
+
